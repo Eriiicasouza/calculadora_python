@@ -59,31 +59,26 @@ while calcular:
       n2 = int(input('Digite o segundo numero: '))
       calculo.operacao1(n1, n2)
       calcular = continuar(input('Tecle ENTER para encerrar ou digite qualquer coisa para continuar: '))
-      print('Programa encerrado.')
     elif opcao == 2: 
       n1 = int(input('Digite o primeiro numero: '))
       n2 = int(input('Digite o segundo numero: '))
       calculo.operacao2(n1, n2)
       calcular = continuar(input('Tecle ENTER para encerrar ou digite qualquer coisa para continuar: '))
-      print('Programa encerrado.')
     elif opcao == 3: 
       n1 = int(input('Digite o primeiro numero: '))
       n2 = int(input('Digite o segundo numero: '))
       calculo.operacao3(n1, n2)
       calcular = continuar(input('Tecle ENTER para encerrar ou digite qualquer coisa para continuar: '))   
-      print('Programa encerrado.')
     elif opcao == 4: 
       n1 = int(input('Digite o primeiro numero: '))
       n2 = int(input('Digite o segundo numero: '))
       calculo.operacao4(n1, n2)
       calcular = continuar(input('Tecle ENTER para encerrar ou digite qualquer coisa para continuar: '))
-      print('Programa encerrado.')
     elif opcao == 5: 
       n1 = int(input('Digite o primeiro numero: '))
       n2 = int(input('Digite o segundo numero: '))
       calculo.operacao5(n1, n2)
       calcular = continuar(input('Tecle ENTER para encerrar ou digite qualquer coisa para continuar: '))  
-      print('Programa encerrado.')
     elif opcao == 6: 
       n1 = int(input('Digite o primeiro numero: '))
       n2 = int(input('Digite o segundo numero: '))
