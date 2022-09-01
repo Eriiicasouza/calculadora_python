@@ -1,36 +1,5 @@
->> Olá pessoal! Estou compartilhando com vocês meu código em Python utilizando o método das classes. Escrevi o código utilizando o PyCharm. 
->> Espero que seja útil para vocês =)
-
-class Calculadora():
-
-    def __init__(self, n1=1, n2=1):
-        self.n1 = n1
-        self.n2 = n2
-    def operacao1(self, n1, n2):
-        self.n1 = n1
-        self.n2 = n2
-        print('O Resultado de',n1,'+',n2, 'é:',int(n1 + n2))
-    def operacao2(self, n1, n2):
-        self.n1 = n1
-        self.n2 = n2
-        print('O Resultado de',n1,'-',n2, 'é:',int(n1 - n2))
-    def operacao3(self, n1, n2):
-        self.n1 = n1
-        self.n2 = n2
-        print('O Resultado de',n1,'X',n2, 'é:',int(n1 * n2))
-    def operacao4(self, n1, n2):
-        self.n1 = n1
-        self.n2 = n2
-        print('O Resultado de',n1,'/',n2, 'é:',int(n1 / n2))
-    def operacao5(self, n1, n2):
-        self.n1 = n1
-        self.n2 = n2
-        print('O Resultado de',n1,'^',n2, 'é:',int(n1 ** n2))
-    def operacao6(self, n1, n2):
-        self.n1 = n1
-        self.n2 = n2
-        print('O Resultado de',n1,'%',n2, 'é:',float(n1 % n2))
-
+# Criando uma classe onde irá ficar armazenada as funções para cada operação.
+# Imprimindo o MENU para o usuário.
 print('Seja bem vindo usuário! Para iniciar digite qual operação deseja realizar:')
 print('1- (+) PARA SOMA'
       '\n2- (-) PARA SUBTRAÇÃO'
@@ -39,49 +8,56 @@ print('1- (+) PARA SOMA'
       '\n5- (^) PARA EXPONENCIAÇÃO'
       '\n6- (%) PARA MÓDULO')
 
+# Função para o usuário escolher se vai voltar ao início do MENU ou encerrar a calculadora.
 def continuar(entrada):
-  if entrada:
+  if entrada == '1':
     return True
   else:
+    print('Programa encerrado...')
     return False 
 
+# Variável calcular criada para chamar a função continuar para que usuário possa escolher se vai continuar usando o programa ou se irá encerrá-lo:
+# Estão sendo usadas na linha que roda o comando: calcular = continuar(input('Tecle ENTER para encerrar ou digite qualquer coisa para continuar. '))
 calcular = True
+
+#Laço de repetição criado com condição para o usuário escolher uma opção válida:
 while calcular: 
   calculo = Calculadora()
   opcao = input('\nEscolha uma opção (1, 2, 3, 4, 5 ou 6): ')
   if not(opcao in '1 2 3 4 5 6'):
     print('Opção inválida')
     continue 
+
+#Se o usuário escolher uma opção válida, ele irá poder inserir os valores para que o sistema os calcule:
   else: 
     opcao = int(opcao)
     if opcao == 1: 
       n1 = int(input('Digite o primeiro numero: '))
       n2 = int(input('Digite o segundo numero: '))
       calculo.operacao1(n1, n2)
-      calcular = continuar(input('Tecle ENTER para encerrar ou digite qualquer coisa para continuar.'))
+      calcular = continuar(input('Tecle ENTER para encerrar ou digite 1 para continuar.  '))
     elif opcao == 2: 
       n1 = int(input('Digite o primeiro numero: '))
       n2 = int(input('Digite o segundo numero: '))
       calculo.operacao2(n1, n2)
-      calcular = continuar(input('Tecle ENTER para encerrar ou digite qualquer coisa para continuar.'))
+      calcular = continuar(input('Tecle ENTER para encerrar ou digite 1 para continuar.  '))
     elif opcao == 3: 
       n1 = int(input('Digite o primeiro numero: '))
       n2 = int(input('Digite o segundo numero: '))
       calculo.operacao3(n1, n2)
-      calcular = continuar(input('Tecle ENTER para encerrar ou digite qualquer coisa para continuar.'))   
+      calcular = continuar(input('Tecle ENTER para encerrar ou digite 1 para continuar.  '))   
     elif opcao == 4: 
       n1 = int(input('Digite o primeiro numero: '))
       n2 = int(input('Digite o segundo numero: '))
       calculo.operacao4(n1, n2)
-      calcular = continuar(input('Tecle ENTER para encerrar ou digite qualquer coisa para continuar.'))
+      calcular = continuar(input('Tecle ENTER para encerrar ou digite 1 para continuar.  '))
     elif opcao == 5: 
       n1 = int(input('Digite o primeiro numero: '))
       n2 = int(input('Digite o segundo numero: '))
       calculo.operacao5(n1, n2)
-      calcular = continuar(input('Tecle ENTER para encerrar ou digite qualquer coisa para continuar.'))  
+      calcular = continuar(input('Tecle ENTER para encerrar ou digite 1 para continuar.  '))  
     elif opcao == 6: 
       n1 = int(input('Digite o primeiro numero: '))
       n2 = int(input('Digite o segundo numero: '))
       calculo.operacao6(n1, n2)
-      calcular = continuar(input('Tecle ENTER para encerrar ou digite qualquer coisa para continuar.'))   
-      
+      calcular = continuar(input('Tecle ENTER para encerrar ou digite 1 para continuar.  '))
